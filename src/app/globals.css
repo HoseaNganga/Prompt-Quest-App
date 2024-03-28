@@ -1,0 +1,135 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+.desc {
+  @apply mt-5 text-lg text-gray-600 sm:text-xl max-w-2xl;
+}
+.glassmorphism {
+  @apply rounded-xl border border-gray-200 bg-white/20 shadow-[inset_10px_-50px_94px_0_rgb(199,199,199,0.2)] backdrop-blur p-5;
+}
+.form_textarea {
+  @apply w-full flex rounded-lg h-[200px] mt-2 p-3 text-xl text-black outline-0 bg-slate-400;
+}
+.form_input {
+  @apply w-full flex rounded-lg mt-2 p-3 text-xl text-black outline-0 bg-slate-400;
+}
+.search_input {
+  @apply block w-auto rounded-md border bg-white py-2.5 pl-5 pr-12 text-black shadow-lg font-medium focus:border-black focus:outline-none focus:ring-0;
+}
+.flex-center {
+  @apply flex justify-center items-center;
+}
+.prompt_card {
+  @apply flex-1 w-64 break-inside-avoid rounded-lg border border-gray-300 bg-white/20 bg-clip-padding p-6 pb-4 backdrop-blur-lg backdrop-filter /* md:w-[360px] */  h-fit;
+}
+.copy_btn {
+  @apply w-7 h-7 rounded-full bg-white/10 shadow-[inset_10px_-50px_94px_0_rgb(199,199,199,0.2)] backdrop-blur flex justify-center items-center cursor-pointer;
+}
+
+.flex-start {
+  @apply flex justify-start items-start;
+}
+
+.flex-end {
+  @apply flex justify-end items-center;
+}
+
+.flex-between {
+  @apply flex justify-between items-center;
+}
+.black_btn {
+  @apply outline-none border-none rounded-full  bg-black py-1.5 px-5 text-white transition-all hover:bg-green-600 hover:text-black text-center text-sm flex items-center justify-center;
+}
+.black_btn_1 {
+  @apply outline-none border-none rounded-full  bg-white py-1.5 px-5 text-black transition-all hover:bg-green-600 hover:text-black text-center text-sm flex items-center justify-center;
+}
+.outline_btn {
+  @apply outline-none border-none  rounded-full   bg-black py-1.5 px-5 text-white transition-all hover:bg-red-600 hover:text-black text-center text-sm  flex items-center justify-center;
+}
+.outline_btn_1 {
+  @apply outline-none border-none  rounded-full   bg-white py-1.5 px-5 text-black transition-all hover:bg-red-600 hover:text-black text-center text-sm  flex items-center justify-center;
+}
+.head_text {
+  @apply mt-5 text-5xl font-extrabold leading-[1.15] text-black sm:text-6xl;
+}
+.blue_gradient {
+  @apply bg-gradient-to-r from-blue-600 to-cyan-600 bg-clip-text text-transparent;
+}
+
+.hamburger {
+  cursor: pointer;
+  width: 24px;
+  height: 24px;
+  transition: all 0.4s ease-in-out;
+  position: relative;
+  z-index: 10;
+}
+
+.hamburger-top,
+.hamburger-middle,
+.hamburger-bottom {
+  position: absolute;
+  width: 24px;
+  height: 2px;
+  background-color: red;
+  transform: rotate(0);
+  transition: all 0.4s ease-in-out;
+}
+
+.hamburger-middle {
+  transform: translateY(7px);
+}
+
+.hamburger-bottom {
+  transform: translateY(14px);
+}
+
+.openMenu {
+  transform: rotate(90deg);
+  transform: translateY(0px);
+}
+
+.openMenu .hamburger-top {
+  transform: rotate(45deg) translateY(6px) translate(6px);
+}
+
+.openMenu .hamburger-middle {
+  opacity: 0;
+}
+.openMenu .hamburger-bottom {
+  transform: rotate(-45deg) translateY(6px) translate(-6px);
+}
+
+/* .openMenu .mobile {
+  left: 0;
+} */
+
+#mobileMenu {
+  transition-property: opacity, transform;
+  transition-duration: 0.4s;
+}
