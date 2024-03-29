@@ -34,7 +34,6 @@ const CreatePrompt = () => {
       setSubmitting(false);
     }
   };
-  console.log(createdPrompt);
   return (
     <>
       <PromptForm

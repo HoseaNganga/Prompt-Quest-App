@@ -58,7 +58,6 @@ const HomeFeed = () => {
     const searchResult = filterPrompts(tagname);
     setSearchedResults(searchResult);
   };
-  console.log(userPrompts);
 
   return (
     <section className="p-8">
