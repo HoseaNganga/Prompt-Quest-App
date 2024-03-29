@@ -2,7 +2,7 @@
 import ProfileCard from "@/components/ProfileCard/ProfileCard";
 import { useState, useEffect } from "react";
 import { useSearchParams } from "next/navigation";
-const userProfile = ({ params }) => {
+const UserProfile = ({ params }) => {
   const searchParams = useSearchParams();
   const userName = searchParams.get("name");
   const [userPosts, setUserPosts] = useState([]);
@@ -25,4 +25,4 @@ const userProfile = ({ params }) => {
   );
 };
 
-export default userProfile;
+export default UserProfile;
