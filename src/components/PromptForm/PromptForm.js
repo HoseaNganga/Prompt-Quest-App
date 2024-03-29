@@ -20,7 +20,7 @@ const PromptForm = ({
         onSubmit={handleSubmit}
       >
         <div className="grid gap-4">
-          <label htmlFor="ai-prompt" className=" text-2xl ">
+          <label htmlFor="ai-prompt" className=" text-2xl dark:text-slate-950 ">
             Your Ai-Prompt:{" "}
           </label>
           <textarea
@@ -37,7 +37,7 @@ const PromptForm = ({
           ></textarea>
         </div>
         <div className="grid gap-4">
-          <label htmlFor="tag" className=" text-2xl ">
+          <label htmlFor="tag" className=" text-2xl dark:text-slate-950 ">
             Tag (#coding):
           </label>
           <input
