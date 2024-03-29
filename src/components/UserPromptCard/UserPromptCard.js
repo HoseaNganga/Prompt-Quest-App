@@ -52,9 +52,9 @@ const UserPromptCard = ({ data, handleTagClick, handleEdit, handleDelete }) => {
           />
         </div>
       </div>
-      <p className="my-4">{data.prompt}</p>
+      <p className="my-4 dark:text-white">{data.prompt}</p>
       <p
-        className="blue_gradient cursor-pointer"
+        className="blue_gradient cursor-pointer dark:text-white"
         onClick={() => handleTagClick && handleTagClick(data.tag)}
       >
         {data.tag}
