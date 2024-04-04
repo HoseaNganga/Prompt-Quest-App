@@ -35,8 +35,12 @@ const UserPromptCard = ({ data, handleTagClick, handleEdit, handleDelete }) => {
             className="rounded-full object-contain"
           />
           <div className="flex flex-col">
-            <h3 className="font-semibold">{data.creator.username}</h3>
-            <p className="text-sm text-gray-400 ">{data.creator.email}</p>
+            <h3 className="font-semibold dark:text-slate-900">
+              {data.creator.username}
+            </h3>
+            <p className="text-sm dark: text-slate-600 ">
+              {data.creator.email}
+            </p>
           </div>
         </div>
         <div className="copy_btn" onClick={handleCopy}>
@@ -52,9 +56,9 @@ const UserPromptCard = ({ data, handleTagClick, handleEdit, handleDelete }) => {
           />
         </div>
       </div>
-      <p className="my-4 dark:text-slate-500">{data.prompt}</p>
+      <p className="my-4 dark:text-slate-800">{data.prompt}</p>
       <p
-        className="blue_gradient cursor-pointer dark:text-slate-500"
+        className="blue_gradient cursor-pointer dark:text-blue-600"
         onClick={() => handleTagClick && handleTagClick(data.tag)}
       >
         {data.tag}
